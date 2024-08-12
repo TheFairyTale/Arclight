@@ -4,6 +4,12 @@
 name: Build
 
 on:
+  workflow_dispatch:
+    inputs:
+      runner.os: 
+        default: 'Linux'
+      secrets.ARCLIGHT_FILES_TOKEN:
+        default: ''
   push:
     branches:
       - '**'
